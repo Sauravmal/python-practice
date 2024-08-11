@@ -1,1 +1,16 @@
+def cal(in1, in2, op):
+    if op == 'add':
+        print(in1 + in2)
+    elif op == "mul":
+        print(in1 * in2)
+    elif op == "sub":
+        print(in1 - in2)
+    elif op == "mod":
+        print(in1 % in2)
+    else:
+        print("Invalid input")
 
+
+cal(int(input("Enter your value:")), (int(input("Enter your sec input:"))), input("Enter 'add' for addition, 'mul' for "
+                                                                                  "multiplication, 'sub' for "
+                                                                                  "subtraction, 'mod' for modules: "))
