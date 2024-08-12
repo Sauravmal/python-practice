@@ -14,3 +14,103 @@ def cal(in1, in2, op):
 cal(int(input("Enter your value:")), (int(input("Enter your sec input:"))), input("Enter 'add' for addition, 'mul' for "
                                                                                   "multiplication, 'sub' for "
                                                                                   "subtraction, 'mod' for modules: "))
+
+
+"""
+1. Write a Python Program to Check weather a Given Number is odd or Even.
+2. Write a Python Program to Check weather a candidate Eligible for Vote or not.
+3. Write a Python program to check weather Given Number is Divisible by 7 or Not.
+4.Write a program to display “Hello” if a number entered by user is a multiple of five , otherwise print “Bye”.
+5. Write a program to accept percentage from the user and display the grade according to the following **
+** criteria:
+** Marks Grade**
+marks > 80: A+ grade
+marks > 70 : A grade
+marks > 60: B grade
+** marks > 50: C grade**
+else Failed.
+
+6.Write a program that interprets the Body Mass Index (BMI) based on a user’s weight and height.
+It should tell them the interpretation of their BMI based on the BMI value.
+• Under 18.5 they are underweight
+• Over 18.5 but below 25 they have a normal weight
+• Over 25 but below 30 they are slightly overweight
+• Over 30 but below 35 they are obese
+• Above 35 they are clinically obese.
+
+The BMI is calculated by dividing a person’s weight (in kg) by the square of their height (in m) .
+Take height and weight from the user.
+"""
+
+
+def odd_even(var):
+    if var % 2 == 0:
+        print(var, "is a even number")
+    else:
+        print(var, "is a odd number")
+
+
+i = int(input("Enter the value of i :"))
+odd_even(i)
+
+
+def age(x):
+    if x >= 18:
+        print("You are eligible to vote")
+    else:
+        print("You are not eligible")
+
+
+age(int(input("Enter your age:")))
+
+
+def dev(x):
+    if x % 7 == 0:
+        print(x, "Is divisible by 7")
+    else:
+        print(x, "Is not divisible by 7")
+
+
+dev(int(input("Enter your NUmber:")))
+
+
+def mul(x):
+    if x % 5 == 0:
+        print("Hello")
+    else:
+        print("Bye")
+
+
+mul(int(input("Enter your number:")))
+
+
+def percent(x):
+    if x >= 80 and x >= 100:
+        print("A+ grade")
+    elif 70 <= x <= 80:
+        print("A grade")
+    elif 60 <= x <= 70:
+        print("B grade")
+    elif 50 <= x <= 60:
+        print("C grade")
+    else:
+        print("Fail")
+
+
+percent(int(input("Enter your marks :")))
+
+
+def bmi(w, h):
+    if w / (h * h) < 18.5:
+        print("You are Under weight")
+    elif 18.5 <= w / (h * h) < 25:
+        print("You have a normal weight")
+    elif 25 <= w / (h * h) < 30:
+        print("You are Slightly over weight")
+    elif 30 <= w / (h * h) < 35:
+        print("You are obese")
+    else:
+        print("You are clinically obese")
+
+
+bmi(float(input("Enter your weight in Kg :")), (float(input("Enter your Height in meter :"))))
